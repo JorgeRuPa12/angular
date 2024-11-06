@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(48, 48, 104);
+}
+
+h2 {
+    color: rgb(15, 126, 223);
+}
+
+p {
+    font-size: large;
+}
+
+ul {
+    font-size: large;
+    list-style: none;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 7px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    background-color: rgb(39, 104, 224);
+    color: white;
+}
+button:hover {
+    background-color: rgb(30, 84, 185);
+    cursor: pointer;
+}

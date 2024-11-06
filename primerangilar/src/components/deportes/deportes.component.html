@@ -1,0 +1,32 @@
+<div>
+    <h1>Deportes</h1>
+    <ul>
+        <li style="color: whitesmoke; padding: 3px;" *ngFor="let num of numeros"
+        [ngClass]="{
+            par: num % 2 == 0,
+            impar: num % 2 == 1
+        }">
+            {{num}}
+        </li>
+    </ul>
+    <h2>Número de deportes: {{sports.length}}</h2>
+    <!-- Directiva IF -->
+    <div *ngIf="sports.length < 6; then condiciontrue; else condicionelse">
+    </div>
+    <ng-template #condiciontrue>
+        <p style="color: rgb(126, 32, 32);">
+            Tienes menos de 6 deportes
+        </p>
+    </ng-template>
+    <ng-template #condicionelse>
+        <p style="color: rgb(111, 111, 226);">
+            Tenemos mas de 6 deportes!!!
+        </p>
+    </ng-template>
+    <p style="color: rgb(66, 177, 66)">El primer deporte es: {{sports[0]}}</p>
+    <ul>
+        <li *ngFor="let deporte of sports; let i = index">
+            {{i}}. {{deporte}}
+        </li>
+    </ul>
+</div>
