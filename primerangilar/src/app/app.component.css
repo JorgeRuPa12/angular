@@ -34,3 +34,11 @@ button:hover {
     background-color: rgb(30, 84, 185);
     cursor: pointer;
 }
+
+.cajaform{
+    margin: 0 auto;
+    border: 1px solid rgb(206, 206, 206);
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -2,20 +2,26 @@
     <h1>Forms Binding Model</h1>
     <h2>{{mensaje}}</h2>
     <!-- El formulario debe tener un id de angular igualado a ngForm -->
-     <form #userForm="ngForm" (ngSubmit)="recibirDatos()">
-        <!-- Los controles de formulario deben tener un id de angular como valor ngModel -->
-        <!-- Para indicar el model binding debemos hacerlo con la siguiente sintaxis [(ngModel)]="Mi Modelo" -->
-        <label>Nombre</label>
-        <input type="text" name="cajanombre" #cajanombre="ngModel" [(ngModel)]="user.nombre"><br/>
-        <label>Apellidos</label>
-        <input type="text" name="cajaapellidos" #cajanapellidos="ngModel" [(ngModel)]="user.apellidos"><br/>
-        <label>Edad</label>
-        <input type="text" name="cajaedad" #cajaedad="ngModel" [(ngModel)]="user.edad"><br/>
-        <button>Enviar</button>
-     </form>
-     <h2>
-        Nombre: {{user.nombre}},
-        Apellidos: {{user.apellidos}},
-        Edad: {{user.edad}}
-     </h2>
+     <div class="cajaform">
+         <form #userForm="ngForm" (ngSubmit)="recibirDatos()">
+            <!-- Los controles de formulario deben tener un id de angular como valor ngModel -->
+            <!-- Para indicar el model binding debemos hacerlo con la siguiente sintaxis [(ngModel)]="Mi Modelo" -->
+            <label>Nombre</label><br/>
+            <input type="text" name="cajanombre" required #cajanombre="ngModel" [(ngModel)]="user.nombre">
+            <span *ngIf="cajanombre.valid == false && cajanombre.touched" style="color: red;">El nombre es obligatorio</span><br/>
+            <label>Apellidos</label><br/>
+            <input type="text" name="cajaapellidos" #cajaapellidos="ngModel" [(ngModel)]="user.apellidos"><br/>
+            <label>Edad</label><br/>
+            <input type="text" name="cajaedad" #cajaedad="ngModel" [(ngModel)]="user.edad">
+            <button [disabled]="!userForm.valid" style="float: right; ">Enviar</button>
+         </form>
+     </div>
+     <div style="text-align: center;">
+         <h2>
+            Nombre: {{user.nombre}},
+            Apellidos: {{user.apellidos}},
+            Edad: {{user.edad}}
+         </h2>
+     </div>
+     
 </div>
