@@ -41,4 +41,10 @@ button:hover {
     width: 25%;
     padding: 10px;
     border-radius: 5px;
+    transition: padding 1.5s ease;
 }
+
+.cajaform:hover{
+    padding: 20px;
+}
+

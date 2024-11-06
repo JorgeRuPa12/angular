@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FormsBindingComponent } from '../components/formsbinding/formsbinding.component';
 import { SumarNumerosComponent } from '../components/sumarnumeros/sumarnumeos.component';
 import { PruebaComponent } from './components/prueba/prueba.component';
+import { TablamultiplicarComponent } from './components/tablamultiplicar/tablamultiplicar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PruebaComponent } from './components/prueba/prueba.component';
     DeportesComponent,
     FormsBindingComponent,
     SumarNumerosComponent,
-    PruebaComponent
+    PruebaComponent,
+    TablamultiplicarComponent
   ],
   imports: [
     BrowserModule,

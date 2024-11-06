@@ -1,0 +1,28 @@
+<div>
+    <h1>Tabla de multiplicar</h1>
+    <div class="cajaform">
+        <form #tablaForm="ngForm">
+            <button (click)="generarTabla()" style="float: right;">
+                Generar Tabla
+            </button>
+            <label>Introduzca un Numero</label><br/>
+            <input type="text" name="cajanumero" #cajanumero/>
+        </form>
+    </div>
+    <div id="cajaTabla">
+        <table *ngIf="resultados.length > 0">
+            <thead>
+                <tr>
+                    <th>Operación</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let resul of resultados; let i = index">
+                    <td>{{resul.operacion}}</td>
+                    <td>{{resul.resultado}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
