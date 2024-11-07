@@ -1,0 +1,16 @@
+<div id="cajaTabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let resul of resultados">
+                <td>{{resul.resultado}}</td>
+                <td>{{resul.operacion}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
