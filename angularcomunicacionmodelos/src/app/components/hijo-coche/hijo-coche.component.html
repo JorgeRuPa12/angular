@@ -1,0 +1,18 @@
+<div>
+    <h2>Hijo Coche Component</h2>
+    <h3>
+        {{car.marca}} {{car.modelo}}
+    </h3>
+    <h3 [ngClass]="{
+        verde: car.estado == true,
+        rojo: car.estado == false
+    }">
+    {{mensaje}}</h3>
+    <h3>Velocidad: {{car.velocidad}}</h3>
+    <button (click)="encenderCoche()">
+        Start/Stop coche
+    </button>
+    <button (click)="acelerarCoche()">
+        Acelerar!!!
+    </button>
+</div>
