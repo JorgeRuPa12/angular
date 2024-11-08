@@ -1,0 +1,24 @@
+button {
+    padding: 7px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    background-color: rgb(39, 104, 224);
+    color: white;
+}
+button:hover {
+    background-color: rgb(30, 84, 185);
+    cursor: pointer;
+}
+
+.cajaform{
+    margin: 0 auto;
+    border: 1px solid rgb(206, 206, 206);
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: padding 1.5s ease;
+}
+
+.cajaform:hover{
+    padding: 20px;
+}

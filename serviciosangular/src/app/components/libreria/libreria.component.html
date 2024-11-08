@@ -1,0 +1,20 @@
+<h2>{{mensaje}}</h2>
+<div class="libreria">
+    <div class="comic" *ngFor="let comic of comics" style="float: left;">
+        <app-comic [comic]="comic"
+        (seleccionarFavoritoPadre)="seleccionarFavoritoPadre($event)"></app-comic>
+    </div> 
+</div>
+
+<h3>Crear Comic</h3>
+<div class="cajaform">
+    <form #comicForm="ngForm">
+        <label>Titulo</label>
+        <input type="text" name="cajatitulo" #cajatitulo/><br/>
+        <label>Imagen</label>
+        <input type="text" name="cajaimagen" #cajaimagen/><br/>
+        <label>Descripcion</label>
+        <input type="text" name="cajadescripcion" #cajadescripcion/><br/>
+        <button (click)="crearComic()">Crear</button>
+    </form>
+</div>
