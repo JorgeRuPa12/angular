@@ -1,6 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { Global } from "../Global";
+import { environment } from "../../environments/environment";
 
 @Injectable()
 export class ServicePersonas {
@@ -18,9 +20,10 @@ export class ServicePersonas {
     }
 
     getPersonasPromesa(): Promise<any> {
-        let urlApiPersonas = "https://servicioapipersonasmvcpgs.azurewebsites.net/api/personas"
+        let request = "api/personas"
+        let url = environment.urlApiPersonas + request
         let promise = new Promise((resolve) => {
-          this._http.get(urlApiPersonas).subscribe((response) => {
+          this._http.get(url).subscribe((response) => {
             resolve(response)
           })
         })

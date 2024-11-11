@@ -1,0 +1,45 @@
+<div>
+    <h1 style="color: tomato;">Plantilla Multiple</h1>
+    <select name="selectFuncion" #selectFuncion multiple>
+        @for (func of funciones; track func) {
+            <option value={{func}}>{{func}}</option>
+        }
+    </select>
+    <button (click)="buscarPlantilla()">Buscar Plantilla</button>
+    <div *ngIf="plantillas">
+        @for (plantilla of plantillas; track plantilla){
+        <div class="container mt-4" >
+            <div class="card">
+              <div class="card-header">
+                <h4>Detalles del Empleado</h4>
+              </div>
+              <div class="card-body">
+                <dl class="row">
+                  <dt class="col-sm-3">ID Empleado</dt>
+                  <dd class="col-sm-9">{{plantilla.idEmpleado}}</dd>
+        
+                  <dt class="col-sm-3">ID Hospital</dt>
+                  <dd class="col-sm-9">{{plantilla.idHospital}}</dd>
+        
+                  <dt class="col-sm-3">ID Sala</dt>
+                  <dd class="col-sm-9">{{plantilla.idSala}}</dd>
+        
+                  <dt class="col-sm-3">Apellido</dt>
+                  <dd class="col-sm-9">{{plantilla.apellido}}</dd>
+        
+                  <dt class="col-sm-3">Función</dt>
+                  <dd class="col-sm-9">{{plantilla.funcion}}</dd>
+        
+                  <dt class="col-sm-3">Turno</dt>
+                  <dd class="col-sm-9">{{plantilla.turno}}</dd>
+        
+                  <dt class="col-sm-3">Salario</dt>
+                  <dd class="col-sm-9">{{plantilla.salario}}</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        }
+    </div>
+    
+</div>

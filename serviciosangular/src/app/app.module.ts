@@ -11,13 +11,23 @@ import { ServicePersonas } from './services/service.personas';
 import { PersonasapiComponent } from './components/personasapi/personasapi.component';
 import { provideHttpClient } from '@angular/common/http';
 import { PersonasstandaloneComponent } from './components/personasstandalone/personasstandalone.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ServiceCoches } from './services/service.coche';
+import { CochesComponent } from './components/coches/coches.component';
+import { PlantillasComponent } from './components/plantillas/plantillas.component';
+import { ServicePlantillas } from './services/service.plantillas';
+import { PlantillafuncionmultipleComponent } from './components/plantillafuncionmultiple/plantillafuncionmultiple.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComicComponent,
     LibreriaComponent,
-    PersonasapiComponent
+    PersonasapiComponent,
+    MenuComponent,
+    CochesComponent,
+    PlantillasComponent,
+    PlantillafuncionmultipleComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +35,7 @@ import { PersonasstandaloneComponent } from './components/personasstandalone/per
     AppRoutingModule,
     PersonasstandaloneComponent
   ],
-  providers: [ServiceComics, ServicePersonas, provideHttpClient()],
+  providers: [ServiceComics, ServicePersonas, ServiceCoches, ServicePlantillas, provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
