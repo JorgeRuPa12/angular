@@ -7,9 +7,10 @@ import { ComicComponent } from './components/comic/comic.component';
 import { LibreriaComponent } from './components/libreria/libreria.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceComics } from './services/service.comics';
-import { HttpClientModule } from '@angular/common/http';
 import { ServicePersonas } from './services/service.personas';
 import { PersonasapiComponent } from './components/personasapi/personasapi.component';
+import { provideHttpClient } from '@angular/common/http';
+import { PersonasstandaloneComponent } from './components/personasstandalone/personasstandalone.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,9 @@ import { PersonasapiComponent } from './components/personasapi/personasapi.compo
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    PersonasstandaloneComponent
   ],
-  providers: [ServiceComics, ServicePersonas],
+  providers: [ServiceComics, ServicePersonas, provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

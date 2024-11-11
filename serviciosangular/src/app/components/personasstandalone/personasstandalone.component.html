@@ -1,0 +1,8 @@
+<div>
+    <h1>Personas Standalone</h1>
+    <ul class="list-group list-group-hover" *ngIf="personas.length > 0">
+        <li *ngFor="let persona of personas" class="list-group-item">
+            {{persona.IdPersona}} - {{persona.Nombre}} - {{persona.Edad}}
+        </li>
+    </ul>
+</div>
