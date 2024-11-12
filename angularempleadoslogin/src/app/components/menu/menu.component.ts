@@ -1,4 +1,5 @@
 import { Component, DoCheck } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,7 @@ import { Component, DoCheck } from '@angular/core';
 export class MenuComponent implements DoCheck {
   public sesion!: boolean
 
-  constructor() {}
+  constructor(private _router: Router) {}
 
   ngDoCheck(): void {
     if(localStorage.getItem('token') == null){
@@ -21,5 +22,6 @@ export class MenuComponent implements DoCheck {
   cerrarSesion(): void{
     alert("Has cerrado sesión")
     localStorage.removeItem('token')
+    this._router.navigate(["/"])
   }
 }

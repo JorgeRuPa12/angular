@@ -12,17 +12,17 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
-        <li class="nav-item">
-            <a class="btn btn-outline-warning mx-1" [routerLink]="['/perfil']" *ngIf="sesion">Perfil Empleado</a>
+        <li class="nav-item" *ngIf="sesion">
+            <a class="btn btn-outline-warning mx-1" [routerLink]="['/perfil']">Perfil Empleado</a>
         </li>
-        <li class="nav-item">
-            <a class="btn btn-outline-success mx-1" [routerLink]="['/subordinados']" *ngIf="sesion">Subordinados</a>
+        <li class="nav-item" *ngIf="sesion">
+            <a class="btn btn-outline-success mx-1" [routerLink]="['/subordinados']">Subordinados</a>
         </li>
         <li class="nav-item" *ngIf="!sesion">
             <a [routerLink]="['/login']" class="btn btn-outline-primary me-2" >Login</a>
         </li>
-        <li class="nav-item">
-            <a (click)="cerrarSesion()" class="btn btn-outline-danger me-2" *ngIf="sesion">Cerrar Sesión</a>
+        <li class="nav-item" *ngIf="sesion">
+            <a (click)="cerrarSesion()" class="btn btn-outline-danger me-2">Cerrar Sesión</a>
         </li>
       </ul>
     </div>
