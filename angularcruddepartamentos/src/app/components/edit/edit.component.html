@@ -1,0 +1,41 @@
+<div>
+    <h1>Edit</h1>
+    <p><a [routerLink]="['/']">Volver</a></p>
+    
+    <form #formulario="ngForm">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input 
+            type="text" 
+            #cajaid 
+            class="form-control" 
+            name="cajaid" 
+            [(ngModel)]="departamento.idDepartamento" 
+            disabled 
+            placeholder="ID no editable">
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input 
+            type="text" 
+            #cajanombre 
+            class="form-control" 
+            name="cajanombre" 
+            [(ngModel)]="departamento.nombre" 
+            required 
+            placeholder="Nombre del departamento">
+        </div>
+        <div class="form-group">
+          <label for="localidad">Localidad</label>
+          <input 
+            type="text" 
+            #cajalocalidad
+            class="form-control" 
+            name="cajalocalidad" 
+            [(ngModel)]="departamento.localidad" 
+            required 
+            placeholder="Localidad del departamento">
+        </div>
+        <button type="submit" class="btn btn-primary mt-2" (click)="editarDepartamento()" [disabled]="!formulario.valid">Enviar</button>
+      </form>
+</div>
