@@ -11,6 +11,7 @@ import { ServiceDepartamentos } from './services/service.departamentos';
 import { CreateDepartamentoComponent } from './components/create-departamento/create-departamento.component';
 import { DetailsComponent } from './components/details/details.component';
 import { EditComponent } from './components/edit/edit.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditComponent } from './components/edit/edit.component';
     MenuComponent,
     CreateDepartamentoComponent,
     DetailsComponent,
-    EditComponent
+    EditComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
