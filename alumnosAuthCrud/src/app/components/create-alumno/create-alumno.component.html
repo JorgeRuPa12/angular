@@ -1,0 +1,19 @@
+<div>
+    <form class="form-control w-25" (submit)="crearAlumno()">
+        <label>Nombre</label>
+        <input type="text" class="form-control" #nombre name="nombre">
+        <label>apellidos</label>
+        <input type="text" class="form-control" #apellidos name="apellidos">
+        <label>imagen</label>
+        <input type="text" class="form-control" #imagen name="imagen">
+        <label>activo</label>
+        <input type="checkbox" #activo name="activo"><br/>
+        <label>Curso</label>
+        <select class="form-control" #selectCurso name="selectCurso">
+            <option *ngFor="let cur of cursos" value="{{cur}}">
+                {{cur}}
+            </option>
+        </select>
+        <button class="mt-2 btn btn-outline-success">Crear</button>
+    </form>
+  </div>
